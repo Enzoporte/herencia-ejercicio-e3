@@ -18,7 +18,7 @@ namespace PII_Herencia
             this.Vehiculo = vehiculo;
             this.MaxCapacidad = maxCapacidad;
             this.IsPool = (this.MaxCapacidad > 2);
-            this.BioBreve = $"Mi nombre es {NombreCompleto}, y conduzco un {Vehiculo.VehiculoDesc}.";
+            this.BioBreve = $"Hola! Mi nombre es {NombreCompleto}, y conduzco un {Vehiculo.VehiculoDesc}.";
         }
 
         

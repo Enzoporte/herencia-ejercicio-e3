@@ -1,20 +1,19 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using TwitterUCU;
 
 namespace PII_Herencia
 {
     class Program
     {
+        
+
         static void Main(string[] args)
         {
-            
+              
             var twitter = new TwitterImage();
-            Console.WriteLine(twitter.PublishToTwitter("New Employee 2! ","../../Gol.jpg"));
-            /*
-            En éste método deberas mostrar un ejemplo de funcionamiento de tu programa an pseudocódigo. A continuación te 
-            planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
-            en grande! */
+           
             Vehiculo VolkswagenUp1 = new Vehiculo("Volkswagen", "Up!");
             Vehiculo Kicks1 = new Vehiculo("Nissan", "Kicks");
 
@@ -23,6 +22,23 @@ namespace PII_Herencia
             Person pasajero3 = new Pasajero("Vinta", "Grios", "11111111");
             Person conductorComun1 = new Conductor("Enzo", "Cantoni", "54321840", VolkswagenUp1, 2);
             Person conductorPool1 = new Conductor("Matias", "La Cruz", "5363561", Kicks1, 4);
+
+            List<Person> rideShareList = new List<Person> { pasajero1, pasajero2, pasajero3, conductorComun1, conductorPool1 }; 
+
+/*             for (int i = 0; i < rideShareList.Count; i++)
+            {
+                
+                if (rideShareList[i] is Conductor)
+                {
+                    Conductor persona = rideShareList[i];
+                    Console.WriteLine(twitter.PublishToTwitter($"- Bienvenido {persona.NombreCompleto} a los ConductoresUCU! -\n{persona.BioBreve} ","../../Gol.jpg"));
+                }
+                else
+                {
+                    Console.WriteLine(twitter.PublishToTwitter(,"../../Gol.jpg"));
+                }
+            } */
+            
 
            /*  UcuRideShare rideShare = new UcuRideShare();
             
