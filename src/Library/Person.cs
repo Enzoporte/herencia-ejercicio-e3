@@ -7,6 +7,8 @@ namespace PII_Herencia
         public string NombreCompleto { get; set; }
         public string Cedula { get; set; }
         public float Calificacion { get; set; }
+        public string Foto { get; set; }
+
 
 
     }
