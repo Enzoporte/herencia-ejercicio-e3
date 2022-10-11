@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using TwitterUCU;
 
 namespace PII_Herencia
 {
@@ -7,6 +8,9 @@ namespace PII_Herencia
     {
         static void Main(string[] args)
         {
+            
+            var twitter = new TwitterImage();
+            Console.WriteLine(twitter.PublishToTwitter("New Employee 2! ","../../bill2.jpg"));
             /*
             En éste método deberas mostrar un ejemplo de funcionamiento de tu programa an pseudocódigo. A continuación te 
             planteamos un ejemplo de como hacerlo. Esto no significa que te limites a hacer solamente esto, debes pensar 
