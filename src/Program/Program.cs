@@ -17,27 +17,26 @@ namespace PII_Herencia
             Vehiculo VolkswagenUp1 = new Vehiculo("Volkswagen", "Up!");
             Vehiculo Kicks1 = new Vehiculo("Nissan", "Kicks");
 
-            Person pasajero1 = new Pasajero("Lucas", "Peguri", "99999999");
-            Person pasajero2 = new Pasajero("Ignacio", "Berra", "12345678");
-            Person pasajero3 = new Pasajero("Vinta", "Grios", "11111111");
-            Person conductorComun1 = new Conductor("Enzo", "Cantoni", "54321840", VolkswagenUp1, 2);
-            Person conductorPool1 = new Conductor("Matias", "La Cruz", "5363561", Kicks1, 4);
+            Person pasajero1 = new Pasajero("Lucas", "Peguri", "99999999", "../../Peguri.jpg");
+            Person pasajero2 = new Pasajero("Ignacio", "Berra", "12345678", "../../Berra.jpg");
+            Person pasajero3 = new Pasajero("Vinta", "Grios", "11111111","../../Vintagrios.jpg");
+            Person conductorComun1 = new Conductor("Enzo", "Cantoni", "54321840","../../Cantoni.jpg", VolkswagenUp1, 2);
+            Person conductorPool1 = new Conductor("Matias", "La Cruz", "5363561", "../../LaCruz.jpg", Kicks1, 4);
 
             List<Person> rideShareList = new List<Person> { pasajero1, pasajero2, pasajero3, conductorComun1, conductorPool1 }; 
 
-/*             for (int i = 0; i < rideShareList.Count; i++)
+            foreach (Conductor conductor in rideShareList)
             {
-                
-                if (rideShareList[i] is Conductor)
-                {
-                    Conductor persona = rideShareList[i];
-                    Console.WriteLine(twitter.PublishToTwitter($"- Bienvenido {persona.NombreCompleto} a los ConductoresUCU! -\n{persona.BioBreve} ","../../Gol.jpg"));
-                }
-                else
-                {
-                    Console.WriteLine(twitter.PublishToTwitter(,"../../Gol.jpg"));
-                }
-            } */
+                Console.WriteLine(twitter.PublishToTwitter(
+                    $"- Bienvenido {conductor.NombreCompleto} a los ConductoresUCU! -\n{conductor.BioBreve} ", conductor.Foto));
+            }
+
+            foreach (Pasajero pasajero in rideShareList)
+            {
+                Console.WriteLine(twitter.PublishToTwitter(
+                    $"- Nuevo Pasajero UCU! {pasajero.NombreCompleto} -\n", pasajero.Foto));
+            }
+
             
 
            /*  UcuRideShare rideShare = new UcuRideShare();
